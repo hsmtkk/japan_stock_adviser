@@ -1,0 +1,19 @@
+[project]
+name = "japan-stock-adviser"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Alice", email = "you@example.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "yfinance>=1.0",
+]
+
+[project.scripts]
+get_data = "japan_stock_adviser:yahoo_finance_api.get_data"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
