@@ -10,15 +10,30 @@ https://indexes.nikkei.co.jp/nkave/index/component?idx=nkphd
 
 # 銘柄情報
 
-銘柄情報(株価、PER、PBRなど)を得るには、以下のコマンドを実行する。
+銘柄情報(株価、PER、PBRなど)を調べるには、以下のコマンドを実行する。
 
 ```shell
-uv run get_data symbol
+uv run stock_data symbol
 ```
 
-(例)トヨタ(Tickerシンボル 7203)の情報を得る。
+(例)トヨタ(Tickerシンボル 7203)の銘柄情報を得る。
 ```shell
-uv run get_data 7203
+uv run stock_data 7203
 ```
 
 このコマンドはPythonスクリプト(yfinanceライブラリを使用)を実行し、銘柄情報を得る。
+
+# 株主優待
+
+株主優待を調べるには、以下のコマンドを実行する。
+
+```shell
+uv run owner_benefit symbol
+```
+
+(例)トヨタ(Tickerシンボル 7203)の株主優待を得る。
+```shell
+uv run owner_benefit 7203
+```
+
+このコマンドはPythonスクリプトを実行し、株探サイトをスクレイピングし、株主優待を得る。

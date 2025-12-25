@@ -3,16 +3,16 @@ name = "japan-stock-adviser"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Alice", email = "you@example.com" }
-]
 requires-python = ">=3.13"
 dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "chardet>=5.2.0",
     "yfinance>=1.0",
 ]
 
 [project.scripts]
-get_data = "japan_stock_adviser:yahoo_finance_api.get_data"
+stock_data = "japan_stock_adviser:yahoo_finance_api.stock_data"
+owner_benefit = "japan_stock_adviser:kabutan.owner_benefit"
 
 [build-system]
 requires = ["hatchling"]
