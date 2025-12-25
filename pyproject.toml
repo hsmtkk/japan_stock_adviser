@@ -7,12 +7,14 @@ requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.14.3",
     "chardet>=5.2.0",
+    "fake-useragent>=2.2.0",
     "yfinance>=1.0",
 ]
 
 [project.scripts]
 stock_data = "japan_stock_adviser:yahoo_finance_api.stock_data"
 owner_benefit = "japan_stock_adviser:kabutan.owner_benefit"
+nikkei_list_symbols = "japan_stock_adviser:nikkei.list_symbols"
 
 [build-system]
 requires = ["hatchling"]

@@ -1,12 +1,22 @@
 # 構成銘柄一覧
 
-以下Webページから構成銘柄のTickerシンボル、銘柄名を取得する。
+構成銘柄一覧を得るには、以下のコマンドを実行する。
 
-日経連続増配株指数
-https://indexes.nikkei.co.jp/nkave/index/component?idx=nkcdg
+```shell
+uv run nikkei_list_symbols idx
+```
 
-日経累進高配当株指数
-https://indexes.nikkei.co.jp/nkave/index/component?idx=nkphd
+idxは以下の通りである。
+- 日経平均高配当株50指数: nk225hdy
+- 日経連続増配株指数: nkcdg
+- 日経累進高配当株指数: nkphd
+- 日経平均株主還元株40指数: nk225shr
+
+(例)日経平均高配当株50指数の構成銘柄一覧を得る。
+
+```shell
+uv run nikkei_list_symbols nk225hdy
+```
 
 # 銘柄情報
 
