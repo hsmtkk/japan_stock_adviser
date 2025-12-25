@@ -10,4 +10,7 @@ def owner_benefit():
     resp = requests.get(url)
     soup = bs4.BeautifulSoup(resp.text, "html.parser")
     benefit_elem = soup.find("div", class_="stock_yutai_detail_box")
-    print(benefit_elem.text)
+    if benefit_elem is None:
+        print("株主優待なし")
+    else:
+        print(benefit_elem.text)
